@@ -166,6 +166,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 6.25rem;
 
 
 
@@ -174,6 +175,7 @@ main {
 main h3 {
     font-size: 1.75rem;
     margin-bottom: 1.875rem;
+    /* display: none; */
 }
 
 main #product {
@@ -188,7 +190,8 @@ main #product {
     grid-template-rows: repeat(3, 476px); */
     gap: 30px;
     justify-content:center; 
-
+    margin-bottom: 6.25rem;
+    /* display: none; */
 
 }
 
@@ -275,9 +278,80 @@ span img {
     cursor: pointer;
 }
 
+#featured{
+    width: 78%;
+    display: flex;
+    gap: 6rem;
+    /* background-color: yellowgreen; */
+}
+#featured .content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
+}
 
+#featured .content h1{
+    font-size: 2.375rem;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    color: #0A0826;
+    margin-bottom: 1rem;
+}
 
+#featured .content p{
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 28px;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    color:#6C6C6C ;
+    margin-bottom: 1rem;
+}
+
+#featured .content button{
+    width: 155px;
+    padding-left: 24px;
+}
+#featured .image{ 
+    width: 36%;
+
+}
+#featured .image img{
+    width: 100%;
+
+    display: block;
+} 
+
+footer{
+    width: 100%;
+    background-color: #0A0826;
+    color: white;
+    margin-top: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem 0;
+    gap: 30px;
+    text-align: center;
+}
+footer .content h1{
+    font-size:1.5rem ;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+footer p{
+    font-size: 0.875rem;
+    color:#D9DBE1 ;
+}
+footer .social span{
+    margin-right: 1rem;
+}
 
 @media screen and (max-width:576px) {
     header {
@@ -337,14 +411,53 @@ span img {
 
 
 
+
     /* -------------------- main ----------------------- */
     main {
-        padding: 1rem;
+        padding: 0.3rem;
     }
 
     main #product {
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
         row-gap: 1.2rem;
+    } 
+
+    main #product .item h4{
+        font-weight: bold;
     }
-}
+
+    main #product .see-more{
+        grid-column: 1;
+    }
+
+
+
+    /* ------------------------ featured section ---------------------------- */
+
+    #featured{
+        padding: 1rem;
+        width: 100%;
+        flex-direction:column-reverse ;
+        gap: 1.8rem;
+    } 
+
+    #featured .image{
+        width: 100%;
+    }
+    #featured .content{
+        align-items: center;
+        width: 100%;
+    }
+    #featured .content h1{
+        font-size:1.5rem ;
+    } 
+
+    #featured .content p{
+        line-height: normal;
+    } 
+    #featured .content button{
+        margin-bottom: 1.8rem;
+    }
+
+}   
