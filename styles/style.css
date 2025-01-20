@@ -60,7 +60,7 @@ header {
 }
 
 header nav {
-    width: 83%;
+    width: 90%;
     /* background-color: green; */
     justify-content: space-between;
     align-items: center;
@@ -93,25 +93,49 @@ nav ul li a {
 }
 
 
+#sponsor{
+    width: 77%;
+    margin: auto auto;
+    padding: 2.5rem 3.75rem;         ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid  ;
+    border-bottom: 1px solid ;
+    border-image-source: linear-gradient(to right, transparent, #e9e5e5, transparent );
+    border-image-slice: 1;
+    margin-top:4.375rem ;
+}
+
+
+
+
+
+
+
+
+
+
 #hero {
     width: 100%;
     padding: 0 8.25rem 0 7.5rem;
-    background-color: green;
     display: flex;
-    justify-content: space-between;
-    display: none;
+    justify-content: space-around;
+
+
 }
 
-#hero .text-area {
+#hero .text {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     width: 50%;
-    background-color: yellow;
 }
 
 #hero .image-area {
     width: 30%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Circle\ design.svg") no-repeat center / contain;
+    background:url("../images/Circle\ design.svg") no-repeat center / contain;
 }
 
 
@@ -120,31 +144,33 @@ nav ul li a {
     height: 95%;
     display: block;
     position: relative;
-    left: 1%;
+    left: 2.5%;
     top: 2%;
 
 }
 
-#hero .text-area h1 {
-    font-size: 3.25rem;
+#hero .text h1 {
+    font-size: clamp(1.75rem, 1.404rem + 1.538vw, 3.25rem);
     font-weight: bold;
     line-height: 70px;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
-#hero .text-area p {
+#hero .text p {
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.3rem;
+    margin-bottom: 1.625rem;
     color: var(--primary-color);
 }
 
-#hero .text-area .last-line {
+#hero .text .last-line {
     margin-bottom: 1rem;
 }
 
 
-#hero .text-area button {
+#hero .text button {
     width: 196px;
     border-radius: 40px;
     padding: 10px 24px;
@@ -169,8 +195,9 @@ main {
     margin-top: 6.25rem;
 
 
-
 }
+
+
 
 main h3 {
     font-size: 1.75rem;
@@ -282,7 +309,7 @@ span img {
     width: 78%;
     display: flex;
     gap: 6rem;
-    /* background-color: yellowgreen; */
+
 }
 #featured .content{
     display: flex;
@@ -299,6 +326,7 @@ span img {
     font-style: normal;
     color: #0A0826;
     margin-bottom: 1rem;
+    margin-top: 0;
 }
 
 #featured .content p{
@@ -308,7 +336,9 @@ span img {
     font-family: "Poppins", serif;
     font-style: normal;
     color:#6C6C6C ;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
+    text-align: left;
+
 }
 
 #featured .content button{
@@ -318,11 +348,13 @@ span img {
 #featured .image{ 
     width: 36%;
 
+
 }
 #featured .image img{
     width: 100%;
-
+    height: 100%;
     display: block;
+
 } 
 
 footer{
@@ -384,28 +416,59 @@ footer .social span{
 
     }
 
+    #sponsor{
+        width: 100%;
+        padding:1rem 2rem ;
+        border: 0;
+        height: 160px;
+        flex-wrap: wrap;
+        margin-top: 0rem;
+
+    }
+    #sponsor img{
+        transform: scale(0.7)
+    }
+
     #hero {
-        padding: 0rem;
+        padding: 1rem;
         flex-direction: column-reverse;
         gap: 1.375rem;
     }
 
+
     #hero .image-area {
         width: 100%;
+    } 
+
+    #hero .image-area img{
+        left: 4%;
+
     }
 
-
-    #hero .text-area {
+    #hero .text {
         width: 100%;
+        align-items: center;
     }
 
-    #hero .text-area h1 {
-        font-size: 1.75rem;
-        line-height: 1rem;
+    #hero .text h1 {
+        /* font-size: 1.75rem; */
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    #hero .text p {
+        line-height: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    #hero .text button{
+        margin-bottom: 3.125rem;
+    }
+    #hero .text .line-break{
+        display: none;
     }
 
-
-
+    #hero .text{
+        text-align: center;
+    }
 
 
 
@@ -415,6 +478,7 @@ footer .social span{
     /* -------------------- main ----------------------- */
     main {
         padding: 0.3rem;
+        margin-top: 1rem;
     }
 
     main #product {
